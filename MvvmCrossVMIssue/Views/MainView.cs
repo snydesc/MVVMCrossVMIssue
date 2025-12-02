@@ -1,6 +1,10 @@
 using Android.Views;
+using MvvmCross;
+using MvvmCross.Platforms.Android.Core;
 using MvvmCross.Platforms.Android.Presenters.Attributes;
 using MvvmCross.Platforms.Android.Views;
+using MvvmCross.ViewModels;
+using MvvmCross.Views;
 using MvvmCrossVMIssue.Core.ViewModels;
 
 namespace MvvmCrossVMIssue.Droid.Views
@@ -17,7 +21,24 @@ namespace MvvmCrossVMIssue.Droid.Views
    {
       protected override void OnCreate(Bundle? savedInstanceState)
       {
+
+         /*
+         // Work around for MVVM Cross Bug https://github.com/MvvmCross/MvvmCross/issues/4957
+         if (Mvx.IoCProvider?.TryResolve(out IMvxAndroidViewModelLoader? viewModelLoader) == true && viewModelLoader != null)
+         {
+            IMvxBundle? bundle = null;
+            if (Mvx.IoCProvider?.TryResolve<IMvxSavedStateConverter>(out var converter) == true && converter != null)
+            {
+               bundle = converter.Read(savedInstanceState);
+            }
+
+            var vm = viewModelLoader.Load(this.Intent, bundle, typeof(MainViewModel));
+            var view = (IMvxView)this;
+            view.OnViewCreate(() => vm);
+         }
+         */
          base.OnCreate(savedInstanceState);
+
          SetContentView(Resource.Layout.activity_main);
       }
    }

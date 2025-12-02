@@ -1,8 +1,6 @@
 ﻿using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using MvvmCrossVMIssue.Core.ViewModels;
-using NLog;
-using System.Reflection;
 
 namespace MvvmCrossVMIssue.Core
 {
@@ -11,7 +9,6 @@ namespace MvvmCrossVMIssue.Core
       public AppStart(IMvxApplication application, IMvxNavigationService navigationService)
          : base(application, navigationService)
       {
-         NLog.LogManager.Setup().LoadConfigurationFromAssemblyResource(typeof(App).GetTypeInfo().Assembly);
       }
 
       protected override async Task<object?> ApplicationStartup(object? hint = null!)
