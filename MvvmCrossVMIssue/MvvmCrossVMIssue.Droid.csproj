@@ -15,7 +15,7 @@
     <TrimMode>full</TrimMode>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="MvvmCross" Version="10.0.0" />
+    <PackageReference Include="MvvmCross" Version="9.4.0" />
     <PackageReference Include="NLog" Version="6.0.6" />
     <PackageReference Include="NLog.Extensions.Logging" Version="6.1.0" />
   </ItemGroup>
