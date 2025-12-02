@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="MvvmCrossVMIssue.Core/MvvmCrossVMIssue.Core.csproj" />
+  <Project Path="MvvmCrossVMIssue/MvvmCrossVMIssue.Droid.csproj">
+    <Deploy />
+  </Project>
+</Solution>

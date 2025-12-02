@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MvvmCrossVMIssue</string>
+    <string name="app_text">Main View Default</string>
+   <string name="test_screen">Test</string>
+</resources>
