@@ -1,4 +1,6 @@
-﻿using MvvmCross.ViewModels;
+﻿using Microsoft.Extensions.Logging;
+using MvvmCross.Logging;
+using MvvmCross.ViewModels;
 
 
 namespace MvvmCrossVMIssue.Core.ViewModels
@@ -14,6 +16,7 @@ namespace MvvmCrossVMIssue.Core.ViewModels
       }
       public TestViewModel()
       {
+         MvxLogHost.Default?.Log(LogLevel.Information, "TestViewModel::Constructed");
       }
    }
 }

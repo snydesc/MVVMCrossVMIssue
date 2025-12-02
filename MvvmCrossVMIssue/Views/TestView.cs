@@ -1,4 +1,6 @@
 ﻿using Android.Views;
+using Microsoft.Extensions.Logging;
+using MvvmCross.Logging;
 using MvvmCross.Platforms.Android.Binding.BindingContext;
 using MvvmCross.Platforms.Android.Presenters.Attributes;
 using MvvmCross.Platforms.Android.Views.Fragments;
@@ -11,6 +13,7 @@ namespace MvvmCrossVMIssue.Droid.Views
    {
       public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
       {
+         MvxLogHost.Default?.Log(LogLevel.Information, "TestView::Created");
          base.OnCreateView(inflater, container, savedInstanceState);
          View v = this.BindingInflate(Resource.Layout.screen_test, null);
          return v;
